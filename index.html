@@ -1,11 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftCart</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font: lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css: taiwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- icons: font awsome -->
+    <script
+      src="https://kit.fontawesome.com/d257fbac3f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- daisyUi : -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- styles -->
+    <style>
+      .font-lato {
+        font-family: "lato", "poppins", "roboto", "sora", sans-serif;
+      }
+    </style>
+  </head>
+  <nav>
+    <div class="navbar bg-base-100 shadow-sm lg:px-60 sm:px-10 px-5">
+      <div class="navbar-start">
+        <a class="text-blue-800 font-extrabold text-xl">SwiftCart</a>
+      </div>
+      <div class="navbar-center hidden lg:flex"> <!--navcenter-->
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+            <li><a>Products</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a><i class="fa-solid fa-cart-shopping"></i></a>
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Home</a></li>
+            <li><a>Products</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <body class="font-lato">
     <h1>Hello World</h1>
     <p>This is a sample HTML document.</p>
+  </body>
 </html>
