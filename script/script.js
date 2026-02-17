@@ -43,7 +43,7 @@ const displayTopProducts = (products) => {
                     <h2 class="card-title truncate">${product.title}</h2>
                     <h2 class="font-bold">$${product.price}</h2>
                     <div class="card-actions justify-between mt-2">
-                        <button class="btn btn-outline btn-primary">
+                        <button onclick="loadProductDetails(${product.id})" class="btn btn-outline btn-primary">
                             <i class="fa-solid fa-eye"></i> Details
                         </button>
                         <button class="btn btn-primary">
@@ -68,7 +68,7 @@ const displayProductOptions = (products) => {
   const categories = [...new Set(products.map((product) => product.category))];
   categories.forEach((category) => {
     const option = document.createElement("div");
-    
+
     const escapedCategory = category.replace(/'/g, "\\'");
     option.innerHTML = `<button 
     onclick="fetchProductsByCategory('${escapedCategory}')" 
@@ -152,4 +152,39 @@ const displayProductsByCategory = (products) => {
         `;
     cardContainer.appendChild(card);
   });
+};
+// function to load product details in modal
+const loadProductDetails = (id) => {
+  const url = fetch(`https://fakestoreapi.com/products/${id}`);
+  url
+    .then((res) => res.json())
+    .then((data) => {
+      //console.log(data);
+      showProductDetails(data);
+    });
+};
+
+// function to show product details in modal
+const showProductDetails = (product) => {
+  const modalDetail = document.getElementById("modalDetailContainer");
+  modalDetail.innerHTML = "";
+  const modal = document.createElement("div");
+  modal.innerHTML = `
+  <div>
+        <h1>${product.title}</h1>
+        <p>${product.description}</p>
+        <p>Price: $${product.price}</p>
+      </div>
+      <div>
+        <p>rating</p>
+        <p>reviews</p>
+      </div>
+      <div>
+        <button>Buy Now</button>
+        <button>add to cart</button>
+      </div>
+    </div>
+  `;
+  modalDetail.appendChild(modal);
+  document.getElementById("modalContainer").showModal();
 };

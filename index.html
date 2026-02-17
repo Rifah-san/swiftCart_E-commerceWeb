@@ -80,6 +80,42 @@
       </div>
     </div>
   </nav>
+ 
+  <!-- <dialog id="modalContainer" class="modal">
+    <div class="modal-box">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+          ✕
+        </button>
+      </form>
+      <div>
+        <h1>Product Title</h1>
+        <p>Product Description</p>
+        <p>price</p>
+      </div>
+      <div>
+        <p>rating</p>
+        <p>reviews</p>
+      </div>
+      <div>
+        <button>Buy Now</button>
+        <button>add to cart</button>
+      </div>
+    </div>
+  </dialog> -->
+
+  <!-- You can open the modal using ID.showModal() method -->
+<dialog id="modalContainer" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <div id="modalDetailContainer">
+      
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click on ✕ button to close</p>
+  </div>
+</dialog>
   <body class="font-lato">
     <!-- banner section -->
     <section>
@@ -186,12 +222,14 @@
     </section>
   </body>
   <footer
-    class="footer sm:footer-horizontal  bg-base-200 text-base-content p-10 bg-blue-950 text-white xl:px-96 lg:px-36 sm:px-10 px-5"
+    class="footer sm:footer-horizontal bg-base-200 text-base-content p-10 bg-blue-950 text-white xl:px-96 lg:px-36 sm:px-10 px-5"
   >
     <aside class="">
       <h1 class="text-2xl font-bold">SwiftCart</h1>
       <p>
-        Your one-stop destination for all your shopping needs.  We offer a wide range of products, unbeatable prices, and exceptional customer service.  Shop with us and experience the joy of hassle-free shopping today!
+        Your one-stop destination for all your shopping needs. We offer a wide
+        range of products, unbeatable prices, and exceptional customer service.
+        Shop with us and experience the joy of hassle-free shopping today!
       </p>
     </aside>
     <nav>
@@ -223,12 +261,12 @@
       </fieldset>
     </form>
   </footer>
-  <hr class="text-gray-400 ">
+  <hr class="text-gray-400" />
   <footer
-    class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 bg-blue-950 text-white xl:px-96 lg:px-36 sm:px-10 px-5 "
+    class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 bg-blue-950 text-white xl:px-96 lg:px-36 sm:px-10 px-5"
   >
     <aside class="grid-flow-col items-center">
-      <p> © 2025 SwiftCart,Inc. All rights reserved</p>
+      <p>© 2025 SwiftCart,Inc. All rights reserved</p>
     </aside>
     <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
       <a>
