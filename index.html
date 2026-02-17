@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SwiftCart</title>
     <script src="script/script.js"></script>
-    <!-- font: lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
+    <!-- font: montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <!-- css: taiwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- icons: font awsome -->
@@ -28,8 +25,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- styles -->
     <style>
-      .font-lato {
-        font-family: "lato", "poppins", "roboto", "sora", sans-serif;
+      .font-montserrat {
+        font-family: "montserrat", "poppins", "roboto", "sora", sans-serif;
       }
     </style>
   </head>
@@ -37,19 +34,19 @@
   <nav>
     <div class="navbar bg-base-100 shadow-sm xl:px-96 lg:px-36 sm:px-10 px-5">
       <div class="navbar-start">
-        <a class="text-blue-800 font-extrabold text-xl">SwiftCart</a>
+        <a class="text-blue-900 font-bold text-2xl">SwiftCart</a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <!--navcenter-->
         <ul class="menu menu-horizontal px-1">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="text-base font-semibold text-gray-400"><a href="index.html">Home</a></li>
+          <li class="text-base font-semibold text-gray-400"><a href="products.html">Products</a></li>
+          <li class="text-base font-semibold text-gray-400"><a href="about.html">About</a></li>
+          <li class="text-base font-semibold text-gray-400"><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="navbar-end">
-        <a><i class="fa-solid fa-cart-shopping"></i></a>
+        <a><i class="fa-solid fa-cart-shopping text-lg text-blue-900"></i></a>
         <div class="dropdown dropdown-end">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
             <svg
@@ -71,38 +68,15 @@
             tabindex="-1"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li><a>Home</a></li>
-            <li><a>Products</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
- 
-  <!-- <dialog id="modalContainer" class="modal">
-    <div class="modal-box">
-      <form method="dialog">
-        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-          ✕
-        </button>
-      </form>
-      <div>
-        <h1>Product Title</h1>
-        <p>Product Description</p>
-        <p>price</p>
-      </div>
-      <div>
-        <p>rating</p>
-        <p>reviews</p>
-      </div>
-      <div>
-        <button>Buy Now</button>
-        <button>add to cart</button>
-      </div>
-    </div>
-  </dialog> -->
 
   <!-- You can open the modal using ID.showModal() method -->
 <dialog id="modalContainer" class="modal">
@@ -127,12 +101,12 @@
         <div class="hero-content text-neutral-content max-w-full">
           <div class="lg:px-36 sm:px-10 px-5 xl:px-96">
             <h1 class="mb-5 text-5xl font-bold">Best Collection for You</h1>
-            <p class="mb-5">
+            <p class="mb-5 text-sm text-gray-300">
               Discover the best collection of products tailored just for you.
               Shop now and experience the perfect blend of quality, style, and
               affordability with our handpicked selection.
             </p>
-            <button class="btn btn-primary">Shop Now</button>
+            <button class="btn btn-primary bg-blue-900 rounded-lg text-white hover:bg-white hover:text-blue-900">Shop Now</button>
           </div>
         </div>
       </div>
@@ -142,64 +116,64 @@
     <section class="bg-base-200">
       <!-- section title -->
       <div class="text-center pt-10">
-        <h1 class="font-bold text-3xl">Why choose us</h1>
-        <p>we provide best shopping experience with top-notch services.</p>
+        <h1 class="font-bold text-3xl">Why Choose Us</h1>
+        <p class="text-gray-400 font-semibold text-sm">we provide best shopping experience with top-notch services.</p>
       </div>
       <!-- card container -->
       <div
-        class="grid lg:grid-cols-4 grid-cols-1 gap-4 mt-20 pb-10 lg:px-36 sm:px-10 px-5 xl:px-96"
+        class="grid lg:grid-cols-4 grid-cols-1 lg:gap-4 gap-12  mt-20 pb-10 lg:px-36 sm:px-10 px-5 xl:px-96"
       >
-        <div class="card-body bg-white p-6 rounded-xl">
+        <div class="card-body bg-white p-6 rounded-xl shadow-sm">
           <div
-            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg"
+            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg shadow-md"
           >
-            <i class="fa-solid fa-truck-fast text-3xl text-blue-500"></i>
+            <i class="fa-solid fa-truck-fast text-3xl text-blue-900"></i>
           </div>
           <div class="relative -translate-y-8 space-y-3">
-            <h2 class="font-bold text-xl">Fast Delivery</h2>
-            <p class="lg:text-clip">
+            <h2 class="font-semibold text-xl">Fast Delivery</h2>
+            <p class="lg:text-clip text-gray-400 font-semibold text-sm">
               Get your orders delivered to your doorstep in record time with our
               lightning-fast delivery service.
             </p>
           </div>
         </div>
-        <div class="card-body bg-white p-6 rounded-xl">
+        <div class="card-body bg-white p-6 rounded-xl shadow-sm">
           <div
-            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg"
+            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg shadow-md"
           >
-            <i class="fa-solid fa-shield-halved text-3xl text-blue-500"></i>
+            <i class="fa-solid fa-shield-halved text-3xl text-blue-900"></i>
           </div>
           <div class="relative -translate-y-8 space-y-3">
-            <h2 class="font-bold text-xl">Secure Payment</h2>
-            <p>
+            <h2 class="font-semibold text-xl ">Secure Payment</h2>
+            <p class="text-gray-400 font-semibold text-sm">
               Shop with confidence knowing that your payment information is
               protected by our secure payment gateway.
             </p>
           </div>
         </div>
-        <div class="card-body bg-white p-6 rounded-xl">
+        <div class="card-body bg-white p-6 rounded-xl shadow-sm">
           <div
-            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg"
+            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg shadow-md"
           >
-            <i class="fa-solid fa-headset text-3xl text-blue-500"></i>
+            <i class="fa-solid fa-headset text-3xl text-blue-900"></i>
           </div>
           <div class="relative -translate-y-8 space-y-3">
-            <h2 class="font-bold text-xl">24/7 Support</h2>
-            <p>
+            <h2 class="font-semibold text-xl">24/7 Support</h2>
+            <p class="text-gray-400 font-semibold text-sm">
               Our dedicated support team is available around the clock to assist
               you with any questions or concerns you may have.
             </p>
           </div>
         </div>
-        <div class="card-body bg-white p-6 rounded-xl">
+        <div class="card-body bg-white p-6 rounded-xl shadow-sm">
           <div
-            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg"
+            class="relative -translate-y-14 h-16 w-16 bg-cyan-50 border-4 border-white flex items-center justify-center rounded-lg shadow-md"
           >
-            <i class="fa-solid fa-rotate text-3xl text-blue-500"></i>
+            <i class="fa-solid fa-rotate text-3xl text-blue-900"></i>
           </div>
           <div class="relative -translate-y-8 space-y-3">
-            <h2 class="font-bold text-xl">Easy Returns</h2>
-            <p>
+            <h2 class="font-semibold text-xl">Easy Returns</h2>
+            <p class="text-gray-400 font-semibold text-sm">
               Not satisfied with your purchase? Enjoy hassle-free returns and
               exchanges with our easy return policy.
             </p>
@@ -211,13 +185,13 @@
     <!-- featured products section -->
     <section>
       <!-- section container -->
-      <div class="xl:px-96 lg:px-36 sm:px-10 px-5 mb-10">
+      <div class=" xl:px-96 lg:px-36 sm:px-10 px-5 mb-10">
         <div class="text-left mt-10">
           <h1 class="font-bold text-3xl">Trending Now</h1>
         </div>
 
         <!-- card container -->
-        <div class="pt-10 grid grid-cols-3 gap-2" id="cardContainer"></div>
+        <div class="pt-10 grid lg:grid-cols-3 lg:gap-2 grid-cols-1 gap-5" id="cardContainer"></div>
       </div>
     </section>
   </body>
@@ -226,7 +200,7 @@
   >
     <aside class="">
       <h1 class="text-2xl font-bold">SwiftCart</h1>
-      <p>
+      <p class="text-xs text-gray-300 ">
         Your one-stop destination for all your shopping needs. We offer a wide
         range of products, unbeatable prices, and exceptional customer service.
         Shop with us and experience the joy of hassle-free shopping today!
@@ -234,39 +208,39 @@
     </aside>
     <nav>
       <h6 class="footer-title">Quick Links</h6>
-      <a class="link link-hover">Home</a>
-      <a class="link link-hover">Products</a>
-      <a class="link link-hover">About Us</a>
-      <a class="link link-hover">Contact</a>
+      <a class="link link-hover text-xs text-gray-300">Home</a>
+      <a class="link link-hover text-xs text-gray-300">Products</a>
+      <a class="link link-hover text-xs text-gray-300">About Us</a>
+      <a class="link link-hover text-xs text-gray-300">Contact</a>
     </nav>
     <nav>
       <h6 class="footer-title">Support</h6>
-      <a class="link link-hover">FAQs</a>
-      <a class="link link-hover">Shipping</a>
-      <a class="link link-hover">Returns</a>
-      <a class="link link-hover">Privacy Policy</a>
+      <a class="link link-hover text-xs text-gray-300">FAQs</a>
+      <a class="link link-hover text-xs text-gray-300">Shipping</a>
+      <a class="link link-hover text-xs text-gray-300">Returns</a>
+      <a class="link link-hover text-xs text-gray-300">Privacy Policy</a>
     </nav>
     <form>
       <h6 class="footer-title">Newsletter</h6>
       <fieldset class="w-60">
-        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+        <p class="text-xs text-gray-300">Subscribe to our newsletter for the latest updates and offers.</p>
         <div class="flex gap-2 mt-4">
           <input
             type="text"
-            placeholder="username@site.com"
-            class="input input-bordered join-item"
+            placeholder="Enter your email"
+            class="input input-bordered text-teal-900 font-semibold join-item"
           />
-          <button class="btn btn-primary join-item">Subscribe</button>
+          <button class="btn bg-blue-300 text-white hover:bg-white hover:text-blue-900">Subscribe</button>
         </div>
       </fieldset>
     </form>
   </footer>
   <hr class="text-gray-400" />
   <footer
-    class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 bg-blue-950 text-white xl:px-96 lg:px-36 sm:px-10 px-5"
+    class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 bg-blue-950 text-white xl:px-96 lg:px-36 sm:px-10 px-5 static bottom-0"
   >
     <aside class="grid-flow-col items-center">
-      <p>© 2025 SwiftCart,Inc. All rights reserved</p>
+      <p class="text-xs text-gray-300">© 2025 SwiftCart,Inc. All rights reserved</p>
     </aside>
     <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
       <a>
@@ -275,7 +249,7 @@
           width="24"
           height="24"
           viewBox="0 0 24 24"
-          class="fill-current"
+          class="fill-current text-gray-400"
         >
           <path
             d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
@@ -288,7 +262,7 @@
           width="24"
           height="24"
           viewBox="0 0 24 24"
-          class="fill-current"
+          class="fill-current text-gray-400"
         >
           <path
             d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
@@ -301,7 +275,7 @@
           width="24"
           height="24"
           viewBox="0 0 24 24"
-          class="fill-current"
+          class="fill-current text-gray-400"
         >
           <path
             d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"

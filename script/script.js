@@ -35,18 +35,22 @@ const displayTopProducts = (products) => {
                     <img class="h-48 w-full object-contain" src="${product.image}" alt="Product" />
                 </figure>
                 <div class="card-body">
-                    <div class="badge badge-primary">${product.category}</div>
-                    <div class="">
+                    <div class="flex justify-between items-center">
+                    <div class="badge flex items-baseline bg-blue-200 font-semibold text-blue-900">${product.category}</div>
+                    <div class="flex items-center gap-1">
                       <i class="fa-solid fa-star text-yellow-500"></i>${product.rating.rate}
                       <p>(${product.rating.count})</p>
                     </div>
+                    </div>
+                    <div class="mt-2">
                     <h2 class="card-title truncate">${product.title}</h2>
-                    <h2 class="font-bold">$${product.price}</h2>
-                    <div class="card-actions justify-between mt-2">
-                        <button onclick="loadProductDetails(${product.id})" class="btn btn-outline btn-primary">
+                    <h2 class="font-bold text-lg">$${product.price}</h2>
+                    </div>
+                    <div class="card-actions flex items-center justify-between mt-2 ">
+                        <button onclick="loadProductDetails(${product.id})" class="btn text-blue-900 rounded-lg border-blue-900 hover:bg-blue-900 hover:text-white">
                             <i class="fa-solid fa-eye"></i> Details
                         </button>
-                        <button class="btn btn-primary">
+                        <button class="btn bg-blue-900 text-white rounded-lg border-blue-900 hover:bg-white hover:text-blue-900">
                             <i class="fa-solid fa-cart-plus"></i> Add to Cart
                         </button>
                     </div>
@@ -62,7 +66,7 @@ const displayProductOptions = (products) => {
   const optionContainer = document.getElementById("productOptionContainer");
   optionContainer.innerHTML = "";
   const allOption = document.createElement("div");
-  allOption.innerHTML = `<button onclick="displayAllProducts(products)" class="btn btn-outline btn-primary rounded-full text-sm">All</button>`;
+  allOption.innerHTML = `<button onclick="displayAllProducts(products)" class="btn hover:bg-blue-900 hover:text-white rounded-full text-sm">All</button>`;
   optionContainer.appendChild(allOption);
 
   const categories = [...new Set(products.map((product) => product.category))];
@@ -72,7 +76,7 @@ const displayProductOptions = (products) => {
     const escapedCategory = category.replace(/'/g, "\\'");
     option.innerHTML = `<button 
     onclick="fetchProductsByCategory('${escapedCategory}')" 
-    class="btn btn-outline btn-primary rounded-full text-sm">${category}</button>`;
+    class="btn hover:bg-blue-900 hover:text-white rounded-full text-sm">${category}</button>`;
     optionContainer.appendChild(option);
   });
 };
@@ -98,18 +102,22 @@ const displayAllProducts = (products) => {
                     <img class="h-48 w-full object-contain" src="${product.image}" alt="Product" />
                 </figure>
                 <div class="card-body">
-                    <div class="badge badge-primary">${product.category}</div>
-                    <div class="">
+                    <div class="flex justify-between items-center">
+                    <div class="badge flex items-baseline bg-blue-200 font-semibold text-blue-900">${product.category}</div>
+                    <div class="flex items-center gap-1">
                       <i class="fa-solid fa-star text-yellow-500"></i>${product.rating.rate}
                       <p>(${product.rating.count})</p>
                     </div>
+                    </div>
+                    <div class="mt-2">
                     <h2 class="card-title truncate">${product.title}</h2>
-                    <h2 class="font-bold">$${product.price}</h2>
-                    <div class="card-actions justify-between mt-2">
-                        <button class="btn btn-outline btn-primary">
+                    <h2 class="font-bold text-lg">$${product.price}</h2>
+                    </div>
+                    <div class="card-actions flex items-center justify-between mt-2 ">
+                        <button onclick="loadProductDetails(${product.id})" class="btn text-blue-900 rounded-lg border-blue-900 hover:bg-blue-900 hover:text-white">
                             <i class="fa-solid fa-eye"></i> Details
                         </button>
-                        <button class="btn btn-primary">
+                        <button class="btn bg-blue-900 text-white rounded-lg border-blue-900 hover:bg-white hover:text-blue-900">
                             <i class="fa-solid fa-cart-plus"></i> Add to Cart
                         </button>
                     </div>
@@ -132,18 +140,22 @@ const displayProductsByCategory = (products) => {
                     <img class="h-48 w-full object-contain" src="${product.image}" alt="Product" />
                 </figure>
                 <div class="card-body">
-                    <div class="badge badge-primary">${product.category}</div>
-                    <div class="">
+                    <div class="flex justify-between items-center">
+                    <div class="badge flex items-baseline bg-blue-200 font-semibold text-blue-900">${product.category}</div>
+                    <div class="flex items-center gap-1">
                       <i class="fa-solid fa-star text-yellow-500"></i>${product.rating.rate}
                       <p>(${product.rating.count})</p>
                     </div>
+                    </div>
+                    <div class="mt-2">
                     <h2 class="card-title truncate">${product.title}</h2>
-                    <h2 class="font-bold">$${product.price}</h2>
-                    <div class="card-actions justify-between mt-2">
-                        <button class="btn btn-outline btn-primary">
+                    <h2 class="font-bold text-lg">$${product.price}</h2>
+                    </div>
+                    <div class="card-actions flex items-center justify-between mt-2 ">
+                        <button onclick="loadProductDetails(${product.id})" class="btn text-blue-900 rounded-lg border-blue-900 hover:bg-blue-900 hover:text-white">
                             <i class="fa-solid fa-eye"></i> Details
                         </button>
-                        <button class="btn btn-primary">
+                        <button class="btn bg-blue-900 text-white rounded-lg border-blue-900 hover:bg-white hover:text-blue-900">
                             <i class="fa-solid fa-cart-plus"></i> Add to Cart
                         </button>
                     </div>
@@ -171,17 +183,17 @@ const showProductDetails = (product) => {
   const modal = document.createElement("div");
   modal.innerHTML = `
   <div>
-        <h1>${product.title}</h1>
-        <p>${product.description}</p>
-        <p>Price: $${product.price}</p>
+        <h1 class="text-2xl font-bold">${product.title}</h1>
+        <p class="text-gray-600">Description: ${product.description}</p>
+        <p class="font-bold">Price: $${product.price}</p>
       </div>
       <div>
-        <p>rating</p>
-        <p>reviews</p>
+        <p class="flex items-center gap-1 text-gray-700">Rating: ${product.rating.rate} <i class="fa-solid fa-star text-yellow-500 text-sm"></i></p>
+        <p class=" text-gray-700">Reviews: ${product.rating.count}</p>
       </div>
       <div>
-        <button>Buy Now</button>
-        <button>add to cart</button>
+        <button class="btn bg-blue-900 text-white hover:bg-white hover:text-blue-900 rounded-lg">Buy Now</button>
+        <button class="btn hover:text-white hover:bg-blue-900 rounded-lg">add to cart</button>
       </div>
     </div>
   `;
